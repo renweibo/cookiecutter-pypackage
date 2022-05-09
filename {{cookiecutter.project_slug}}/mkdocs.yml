@@ -1,0 +1,6 @@
+site_name: {{cookiecutter.project_slug}} Document Site 文档站
+nav:
+    - Home: 'index.md'
+    - Author: 'AUTHORS.md'
+theme:
+    name: readthedocs
