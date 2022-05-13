@@ -7,10 +7,10 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-with open('docs/HISTORY.rst') as history_file:
+with open('docs/HISTORY.md') as history_file:
     history = history_file.read()
 
-requirements = [{%- if cookiecutter.command_line_interface|lower == 'click' %}'Click', 'typer'{%- endif %} ]
+requirements = [{%- if cookiecutter.command_line_interface|lower == 'typer' %}'Click', 'typer'{%- endif %} ]
 
 test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest>=3',{%- endif %} ]
 
