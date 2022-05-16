@@ -1,9 +1,6 @@
-FROM jupyter/scipy-notebook:latest
+FROM python:3.9-slim
 
-USER root
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends git-core wget curl
-USER jovyan
-RUN pip3 install -U -r requirements_dev.txt
+COPY requirements.txt .
+RUN pip3 install -U -r requirements.txt
 RUN pip3 install -U {{cookiecutter.project_slug}}
 CMD {{cookiecutter.project_slug}}
